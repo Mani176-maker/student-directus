@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Directus backend service",
   "scripts": {
-    "start": "npx directus start",
-    "build": "npx directus bootstrap"
+    "start": "directus start",
+    "build": "directus bootstrap"
   },
   "dependencies": {
     "directus": "^10.0.0"
