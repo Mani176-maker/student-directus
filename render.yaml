@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: directus
+    env: node
+    buildCommand: npm install
+    startCommand: npm run start
+    envVars:
+      - key: PORT
+        value: ${PORT}
+      - key: DB_CLIENT
+        value: postgres
+      - key: DB_HOST
+        value: dpg-d5cbgtn5r7bs73asjm8g-a.postgres.render.com
+      - key: DB_PORT
+        value: 5432
+      - key: DB_USER
+        value: student_print_db_user
+      - key: DB_PASSWORD
+        value: Bc36Szfsls9UEI526FU95rraN7hQI792
+      - key: DB_DATABASE
+        value: student_print_db
