@@ -1,7 +1,30 @@
 services:
   - type: web
+    name: student-print-backend
+    env: node
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: RAZORPAY_KEY_ID
+        sync: false
+      - key: RAZORPAY_KEY_SECRET
+        sync: false
+      - key: DIRECTUS_URL
+        sync: false
+      - key: DIRECTUS_TOKEN
+        sync: false
+
+  - type: web
     name: directus
     env: node
+    plan: free
+    region: singapore
+    branch: main
     buildCommand: npm install
     startCommand: npm run start
     envVars:
